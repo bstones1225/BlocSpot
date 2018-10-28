@@ -1,0 +1,59 @@
+###Short Answer	
+
+1. Why do programmers use pseudocode?
+
+> To give a syntaxless description of the logic and data flow. This allows programmers of different syntax to then port off into whatever language they prefer. Pseudocode provides a universal language any programmer could interpret.  
+
+2. If you run pseudocode on your computer what would happen?
+
+> You would get an error because its not in any specific language syntax
+
+
+### Programming Assigment
+
+1. Create a function that takes two numbers and prints out the greater number.
+    
+```
+INPUT first_num
+INPUT second_num
+IF first_num is greater than second_num
+	PRINT "First number is greater"
+ELSE
+	PRINT "Second number is greater"
+END IF
+```
+
+2. Create a function that prints out the numbers from 1 to 100.
+
+```
+INIT number to 0
+
+while the number is not 100
+	PRINT number
+	ADD 1 to number
+END WHILE
+```    
+
+3. Create a function that searches for a specific entry in a phonebook.
+
+```
+INPUT phoneBook
+INPUT phoneBookMaster
+INIT foundPhone
+REPEAT
+	foundPhone = true
+	return foundPhone
+UNTIL phoneBookmaster = phoneBook
+```
+
+4  Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
+
+```
+var first-num, second_num
+
+if (first_num > second_num){
+
+	console.log("First number is greater");
+else{
+	console.log("Second number is greater");
+```
