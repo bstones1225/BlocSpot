@@ -1,0 +1,15 @@
+Username: tstalcup@thinkful.com
+
+Password: catch em allI use that for students that are stuck on Unit 1
+
+learnredux.com for Unit 2 (it’s free)This book for additional practice:
+
+Book: https://www.dropbox.com/s/hgftjqhpfugto0c/fullstack-react-book-r30.pdf?dl=0
+
+Code: https://www.dropbox.com/s/psnioac5bzhy063/fullstack-react-book-r30-code.zip?dl=0Step 1 - reactforbeginners.com
+
+Step 2 - 1st half of the book
+
+Step 3 - LearnRedux.com
+
+Step 4 - 2nd half of the book

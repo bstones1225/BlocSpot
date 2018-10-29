@@ -1,0 +1,5 @@
+####Questions
+
+> Read the Philosophy section of the React Router documentation. In the submission text area, explain the difference between static and dynamic routing.
+
+A: Static routing, the routes are imported and delcared at the top level, before the App before rendering. Dynamic routing takes place as the App is rendering. This allows easier switching of routes for things like screen sizes or screen rotations.
