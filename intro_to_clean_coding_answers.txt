@@ -1,0 +1,221 @@
+###Questions
+
+1. In your own words, explain what clean code is and why it is important.
+
+> Clean code is important for readability for you, other programmers, and even non-technical management or customers. 
+ 
+2. Read this article about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
+
+> Phones are another thing that need programming at a high standard. 
+
+3. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+
+```
+INIT newTemp to 0
+
+FUNCTION convertTemp(tempNum, degreeSign)               // Creating a new function
+ IF degreeSign = "F" THEN               		// Check if degreeSign is equal "F"
+ 	SET newTemp to (tempNum-32) * (5/9)       	// Formula to convert degrees fahrenheit to celsius
+ 	PRINT newTemp                       		// Print result
+ ELSE IF degreeSign = "C" THEN          		// If y not equal to "F", check if equal to "C"
+ 	SET newTemp to x * 1.8000 + 32.00   		// Formula to convert degrees celsius to fahrenheit
+ 	PRINT newTemp                       		// Print result
+ END IF
+END FUNCTION
+```
+
+4. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+
+> I would consider it clean
+
+5. Using pseudocode, refactor the code for the following examples using the principles you have learned in this checkpoint.
+
+a. The following function prints the subtotal of a customer's transaction and receives payment accordingly.
+
+```
+FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
+	INIT totalDue to (subTotal * discountRate + (subTotal * tax)
+   	PRINT "Your total due is: " + totalDue
+
+	CALL getPayment RETURNING amount
+	IF paymentType = 'CASH' THEN
+       		PRINT "Change due: " + amount - totalDue
+   	ELSE IF paymentType = 'CREDIT CARD' THEN
+       		PRINT "Your credit card has been charged: " + totalDue
+   	END IF
+END FUNCTION
+```
+
+b. The following function checks out a book if there are no issues with the guest's account.
+
+```
+FUNCTION checkoutBook(book, guest)
+ IF guest.accountActive AND NOT guest.hasOverdueBooks AND guest.outstandingFees = 0 THEN
+           APPEND book to guest.books
+           SET book.status to "Checked Out"
+           PRINT "Your books have been issued."
+ ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+```
+
+c. The following class is a code snippet that should support the transactions a customer can perform at an ATM.
+
+```
+CLASS BankAccount
+
+ FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+ FUNCTION depositMade(amount)
+    INIT deposit to balance + amount
+    SET balance to deposit
+ END FUNCTION
+
+ FUNCTION withdrawAmt(amount)
+     
+     IF balance > amount THEN
+       INIT tempBalance to balance - amount
+       SET balance to tempBalance
+     END
+ END FUNCTION
+
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkStatus
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+
+ ....
+ ....
+ ....
+
+END
+```
+
+###Programming Questions
+
+6. Square Given an array of integers, find out whether the sum of the integers is a perfect square. If it is a perfect square, return the square root, otherwise return the sum.
+
+```
+Example:
+[10,1,4,6,1,1,2] returns 5 because the square root of 25 is 5.
+[1,1] returns 2 because 2 is not a perfect square.
+The square root of 2 is approximately 1.414213562373095.
+
+function isSqr (array){
+
+var total = 0, i = 0;
+
+do {
+
+    total += array[i];
+    i++;
+}
+
+
+while (i  < array.length);
+console.log(total);
+
+if (Math.sqrt(total) % 1 === 0){
+
+    return Math.sqrt(total);
+
+}
+
+else{
+
+    return total;
+
+}}
+console.log(isSqr([2,3,4]));
+```
+
+7. Duplicate Given an array of integers, find out whether the array contains any duplicate elements. The function should return true if any value appears at least twice in the array, and false if every element is distinct.
+
+```
+var x = 0;
+var z = 1;
+var array = [1,2,3,4,2,5];
+
+var checkDupNum = function() {
+    for (x; x < array.length; x++){
+        z = x + 1;
+        for (z; z < array.length; z++){
+            console.log(array[x]);
+            console.log(array[z]);
+            
+            if (array[x]=== array[z]){
+                console.log("Dupicate number found " + array[x]);
+            }
+            else if(z !== array.length && array[x] !== array[z]){
+                console.log("No duplicate number found");
+            }
+        }
+    }
+};
+console.log(checkDupNum(array));
+
+```
+
+8. Anagram An anagram is a word, phrase, or name formed by rearranging the letters of another word. For example, spar can be formed from rasp. Given two strings, stringOne and stringTwo, determine if stringOne is an anagram of stringTwo. Assume that the strings contain only lowercase letters and do not worry about case-sensitivity. Hint: Your first task will be to convert the strings to arrays.
+
+
+```
+var stringOne = "elvis";
+var stringTwo = "lives";
+
+var sortedOne = stringOne.split("").sort();
+var sortedTwo = stringTwo.split("").sort();
+
+var anagramTester = function(){
+    for (var x = 0;x < sortedOne.length;x++){
+        console.log("inside for loop");
+        console.log(sortedOne[x]);
+        console.log(sortedTwo[x]);
+        if (sortedOne[x] !== sortedTwo[x]){
+          console.log("Not anagrams");
+          return false;
+         }
+         else if (x === sortedOne.length && sortedOne[x] === sortedTwo[x]){
+            console.log("These are anagrams");
+            return true;
+        }
+}};
+
+console.log(anagramTester(sortedOne,sortedTwo));
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
