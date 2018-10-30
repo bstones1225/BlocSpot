@@ -1,0 +1,99 @@
+- The line is composed of members, represented as strings.
+- There is a front to the line, as well as a back.
+- When someone enters the line, place them at the end.
+- People may leave the line whenever they see fit, and those behind them take their place.
+
+1- Given the above real-world information, use an array data structure to code the following solution.
+
+a). Use an array input: ["Vivian", "Ava", "Josh", "Patrick", "Mike"]
+
+b). Insert a new person, "Mary" at the end of the line. In other words, you should insert Mary after Mike.
+```
+var x = 0;
+var array = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+var insertCustomer = function(custName) {
+    array.splice(array.length + 1, 0, custName); 
+};
+console.log(insertCustomer("Mary"));
+console.log(array.join());
+```
+
+c) Find a person in line named "Josh." This function should return the position of 2 in the array, (recall that arrays are 0-based).
+d) Find a person in line named "Emily." What should your function return if it does not find the item in the array?
+
+```
+var array = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+var findCustomer = function(custName) {
+    for (var x = 0;x <= array.length; x++){
+        if (array[x] !== custName){
+            if (x === array.length){
+            return console.log(custName + " Name not found");
+            }
+        }
+        else if (array[x] === custName){
+            return console.log(custName + " Name found");
+        }
+    }
+};
+findCustomer("Josh");
+findCustomer("Emily");
+```
+
+e) What if Ava wants to allow a friend, "Melissa", to cut in line in front of her? How would you code this so Melissa appears before Ava?
+```
+var array = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+var insertCustomer = function(custName1, custName2) {
+   
+    for (var x = 0; x < array.length; x++){
+        
+        if (array[x] === custName1){
+            array.splice(x, 0, custName2);
+            return array.join();
+        }
+    }
+};
+insertCustomer("Ava", "Melissa");
+console.log(array.join());
+```
+
+f) If Patrick wants to leave the line, how would you delete him from the array? 
+
+```
+var array = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+var deleteCustomer = function(custName) {
+   
+    for (var x = 0; x < array.length; x++){
+        
+        if (array[x] === custName){
+            array.splice(x, 1);
+            return array;
+        }
+    }
+};
+
+console.log(array.join());
+deleteCustomer("Patrick");
+console.log(array.join());
+```
+
+2- Provide another real-world example that you can model using a data structure.
+
+```
+CLASS CUSTOMER{
+	name: Vivian;
+	placeInLine:0;
+	total: 0.00;
+END CLASS
+
+CLASS LINE{
+	CUSTOMER[X]
+END CLASS
+```
+
+3- How would your data structure allow developers to access and manipulate the data?
+
+> It would allow developers to access Customers information, while also allowing it to be used in other data structures. Now you can see whose in line, and select their information based on that information. You could add to an order, or submit the total for payment when the person is first in line.	
