@@ -153,6 +153,8 @@ return (index+1)
           ))}
           </tbody>
           </table>
+
+
           <PlayerBar
             isPlaying={this.state.isPlaying}
             currentSong={this.state.currentSong}
@@ -167,6 +169,7 @@ return (index+1)
             formatTime={(time) => this.formatTime(time)}
           />
        </section>
+
      );
    }
  }

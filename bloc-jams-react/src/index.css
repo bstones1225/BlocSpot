@@ -1,3 +1,7 @@
+* {
+    
+    box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -12,22 +16,78 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+nav {
+
+  overflow: hidden;
+  background-color: #333;;
+
+}
+nav .navLinks{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+.App {
+  background-color: yellow;
+}
+.album{
+height:600px;
+background-color: yellow;
+
+}
+#album-info{
+
+}
+
+#album-cover-art{
+  float:right;
+  width:25%;
+  height:600px;
+
+}
+.album-details{
+  float:right;
+  width:25%;
+  height:600px;
+  background-color: red;
+  top:0;
+
+}
+
+#album-title{
+  background-color: blue;
+  height:auto;
+  font-size: auto;
+}
+.artist{
+  font-style: italic;
+  text-align: center;
+}
+#song-list{
+  float:left;
+  top:0;
+  height:80%;
+  width:50%;
+  background-color: white;
+  border-collapse: collapse;
+  border: 1px solid black;
+  overflow: scroll;
+
+
+
+}
+td {
+    border: 1px solid black;
+}
 
 .player-bar {
   position: fixed;
   background: red;
   bottom:0;
   width:100%;
-}
-#album-info {
-  background-color: blue;
-  right:0;
-  position:fixed;
-
-}
-.album{
-  float:left;
-  background-color: blue;
-  width:75%;
-
+  height:20%;
 }
