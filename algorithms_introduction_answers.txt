@@ -1,0 +1,54 @@
+###Questions
+
+>1.Using proper pseudo-code, describe the following primitive algorithms:
+        . Making coffee;
+
+A: 
+	1. GET coffee and coffee filter from cupboard
+	2. CALCULATE amount of coffee to scoop
+	3. ADD coffee and filter to machine
+	4. CALCULATE water to be added
+	5. INIT cup into position
+	6. OBTAIN coffee from machine after turning it on
+ 
+        . Washing dishes;
+A:
+	1. OBTAIN dirtyDishes
+	2. INIT soapy water and rinsing water in separate sinks
+	3. ADD dirtyDishes to soapyWater
+	4. DETERMINE soakingTime
+	5. SHOW soapyDish
+	6. ADD soapyDish to rinsingWater
+	7. SHOW cleanedDish
+	8. MOVE cleanDish to drying rack
+	
+        . A choice of your own. (Cold brew sweet tea)
+	1. OBTAIN teaBag, pitcher, and sugar
+	2. DETERMINE sugar needed, default is 1.5 cups
+	3. DETERMINE and ADD coldWater to pitcher 
+	4. ADD teaBag to pitcher
+	5. DETERMINE amount of teabag dunks
+	6. IF tea isnt strong enough THEN
+		keep dunking
+	   ELSE
+		remove teaBag
+	   ENDIF
+	7. ADD sugar to pitcher and stir
+	8. IF sugar isnt dissolved THEN
+		keep stirring
+	   ELSE 
+		serve
+	   ENDIF
+	
+
+>2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+A: 
+Geico using their 15 minutes could save you 15% or more. I believe this case qualifies because its a few simple steps. Call Geico, give them 15 minutes and you save money. It was a simple way to buy insurance.
+General Mills with their Hamburger Helped. This case stands out because again it simplifies cooking for families. You add the hamburger, milk, and the Helper and you have a tasty meal.
+Kuerig with the coffee pods. This one stands out because it simplified coffee making and removed steps for people.
+
+
+>3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+A: An efficient algorithm would be a well-trimmed piece of steak. You dont want a ton of fat, but you need some to keep the flavor that makes steaks so yummy. A lean, tender piece of steak that you can cut up,chew easily, and essentially digest easily. An inefficient algorithm would be a cube steak. Where you have to beat it with a hammer to make any sense of it. Then you have to bread, fry, and slather in gravy to cover up the fact that its a tough piece of meat to digest. 
