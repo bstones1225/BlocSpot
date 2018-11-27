@@ -13,9 +13,9 @@ A:
  
         . Washing dishes;
 A:
-	1. OBTAIN dirtyDishes
+	1. OBTAIN dirtyDishes UNTIL a dirtyDish is unavailable to collect, or false.
 	2. INIT soapy water and rinsing water in separate sinks
-	3. ADD dirtyDishes to soapyWater
+	3. ADD dirtyDishes to soapyWater 
 	4. DETERMINE soakingTime
 	5. SHOW soapyDish
 	6. ADD soapyDish to rinsingWater
@@ -28,13 +28,12 @@ A:
 	3. DETERMINE and ADD coldWater to pitcher 
 	4. ADD teaBag to pitcher
 	5. DETERMINE amount of teabag dunks
-	6. IF tea isnt strong enough THEN
+	6. WHILE tea isnt strong enough THEN
 		keep dunking
-	   ELSE
-		remove teaBag
-	   ENDIF
-	7. ADD sugar to pitcher and stir
-	8. IF sugar isnt dissolved THEN
+	   END WHILE
+	7. REMOVE teaBag
+	8. ADD sugar to pitcher and stir
+	9. IF sugar isnt dissolved THEN
 		keep stirring
 	   ELSE 
 		serve
