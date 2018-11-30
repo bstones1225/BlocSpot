@@ -1,0 +1,56 @@
+.album{
+  border: 7px solid #ccc;
+
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height:100%;
+  flex: auto;
+
+}
+#album-cover-art{
+  width:25%;
+  text-align: center;
+
+
+}
+#song-list{
+  float:left;
+  width:35%;
+  height: 100%;
+}
+.album-details{
+  width:25%;
+
+}
+td {
+  text-align: center;
+  height: auto;
+}
+
+.player-bar {
+
+  position:sticky;
+  background: red;
+  bottom:0;
+  width:15%;
+  height: 50%;
+  text-align: center;
+
+}
+
+@media only screen and (max-width: 700px) {
+    .album {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .album{
+        width: 100%;
+        margin: 6px 0;
+
+    }
+}
