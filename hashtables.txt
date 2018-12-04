@@ -18,11 +18,12 @@ A: Its stores data using an identifer.
 A: You are able to use hash tables as objects, and objects as hash tables. The only real difference is the data and how its identified. Use a hash table when the length of the data structure is always changing and the data being stored has formatted identifers. Use an object when the the data is too unique from each other along with different types. 
  
 >5.Determine whether you would use a hash table or an object to store each of the following pieces of data:
+
         -A list of pets and their unique names. **Hash Table**
         -The name, age, and the birthday of your best friend. **Object**
         -The name and location of every company in a given city. **Hash Table**
         -All of the books checked out from a library by a particular individual. **Hash Table**
-        -The primary and secondary phone numbers for a contact. **Object**
+        -The primary and secondary phone numbers for a contact. **Hash Table**
 >6.Build a system that allows a sales associate to enter a customer's name, address, and phone number into the system and look up customers using their phone numbers. Store this information in a hash table.
     
 A:
