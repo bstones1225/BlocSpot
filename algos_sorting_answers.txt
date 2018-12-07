@@ -21,28 +21,16 @@ END FUNCTION
 
 ```
 FUNCTION quickSort(collection)
-  SET low to 0
-  SET high to collection -1
-    IF low < high THEN
-        SET pivot to partition WITH collection, low ,high
-        CALL quickSort WITH collection, low, pivot
-        CALL quickSort WITH collection, pivot + 1, high
+    SET pivot to collection[o]
+    SET smaller and bigger to []
+    FOR (i=1) until i is <= collection.length	
+    IF collection[i] < pivot THEN
+        smaller.push(coll[i])
+    ELSE
+        bigger.push(coll[i])
     END IF
 END FUNCTION
 
-FUNCTION partition(collection, low, high){
-     SET pivot to collection[low]
-     SET leftwall to low
-
-     FOR each item in collection
-         IF collection[i] < pivot THEN
-             swap collection[i] with collection[leftwall + 1]
-             SET leftwall to leftwall + 1
-         END IF
-     END FOR
-     swap WITH pivot, collection[leftwall]
-
-RETURN leftwall
 ```
 
 >3.We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. 
@@ -55,6 +43,6 @@ Quick sort is efficient because it can handle large collections using less memor
 
 >4.All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
 
-A: Bucket sort starts with an unsorted array. Set up an array of empty buckets and we place our input into the buckets depending on the inputs range. Sort the items in the bucket, and place back in original array
+A: Bucket sort starts with the ideal input of an unsorted array. Set up an array of empty buckets and we place our input into the buckets depending on the inputs range. Sort the items in the bucket, and place back in original array
  
 
