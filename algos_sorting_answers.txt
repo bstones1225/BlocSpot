@@ -20,10 +20,14 @@ END FUNCTION
 >2.Write pseudocode for quicksort.
 
 ```
-FUNCTION quickSort(collection, low ,high)
-    IF low < high THEN
-        CALL quickSort WITH collection, low, pivot
-        CALL quickSort WITH collection, pivot + 1, high
+FUNCTION quickSort(collection)
+    SET pivot to collection[o]
+    SET smaller and bigger to []
+    FOR (i=1) until i is <= collection.length	
+    IF collection[i] < pivot THEN
+        smaller.push(coll[i])
+    ELSE
+        bigger.push(coll[i])
     END IF
 END FUNCTION
 
