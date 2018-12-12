@@ -20,15 +20,28 @@ END FUNCTION
 >2.Write pseudocode for quicksort.
 
 ```
-FUNCTION quickSort(collection)
-    SET pivot to collection[o]
-    SET smaller and bigger to []
-    FOR (i=1) until i is <= collection.length	
-    IF collection[i] < pivot THEN
-        smaller.push(coll[i])
-    ELSE
-        bigger.push(coll[i])
-    END IF
+FUNCTION partition(array, low, high)
+	SET pivot = array[high]
+	SET i = (low - 1)
+	FOR (j = low; j < high; j++)
+	   IF (array[j] <= pivot)
+		i++
+	   	SET temp = array[j]
+		array[i] = array[j]
+		array[j] = temp
+	   END IF
+	END FOR
+
+	SET temp = array[i +1]
+	array[i + 1] = array[high]
+	array[high] = temp
+	return i + 1
+END FUNCTION
+FUNCTION quickSort(array, low, high)
+	IF (low < high)
+	  SET pi = partition(array, low, highz0
+          CALL quickSort(array, low, pi - 1)
+	  CALL quickSort(array, pi + 1, high)
 END FUNCTION
 
 ```
