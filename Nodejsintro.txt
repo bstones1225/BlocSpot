@@ -6,7 +6,7 @@ A: Client-functions as the display and user interaction. Its purpose is to make 
 
 >2.What explains Nodes' rise in popularity and use? What does "Isomorphic JavaScript programming" mean? Provide some real-world examples not listed in this checkpoint of companies using Node.js.
 
-A: Nodes rise in popularity could be attributed to it using Javascript. A benefit of it has been isomorphic programming which means code that runs on the client and server-side.
+A: Nodes rise in popularity could be attributed to it using Javascript. A benefit of it has been isomorphic programming which means code that runs on the client and server-side. Companies using Node.js are Hudl, eBay, Groupon, GoDaddy.
 
 >3.Draw a diagram of a full-stack web application and its key components
 
