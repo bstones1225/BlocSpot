@@ -8,7 +8,7 @@ A: Client-functions as the display and user interaction. Its purpose is to make 
 
 A: Nodes rise in popularity could be attributed to it using Javascript. A benefit of it has been isomorphic programming which means code that runs on the client and server-side.
 
->3.Draw a diagram of a full-stack web application and its key components.
+>3.Draw a diagram of a full-stack web application and its key components
 
  
 ||| |_App_| |||         ||| |A| A | | |  Mongo DB  | |
