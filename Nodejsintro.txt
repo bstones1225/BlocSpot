@@ -1,0 +1,21 @@
+####Questions
+
+>1.In your own words highlight the differences in functionality and purposes Client-Side and Server-Side code serves in a full-stack web application.
+
+A: Client-functions as the display and user interaction. Its purpose is to make requests that are then handled by the server.Server-side codes acts as a way to handle the HTTP requests so that the data or API interaction can be sent in response to the client.
+
+>2.What explains Nodes' rise in popularity and use? What does "Isomorphic JavaScript programming" mean? Provide some real-world examples not listed in this checkpoint of companies using Node.js.
+
+A: Nodes rise in popularity could be attributed to it using Javascript. A benefit of it has been isomorphic programming which means code that runs on the client and server-side.
+
+>3.Draw a diagram of a full-stack web application and its key components.
+
+ 
+||| |_App_| |||         ||| |A| A | | |  Mongo DB  | |
+|||__React__|||         ||| |P| P | | |   Driver   |<----> MongoDB
+||__Browser__||<------->|||_|I|_P_| | |____________| |
+|__Client PC__|         ||_Express__|                |
+                        ||___________Node.js_________|
+                        |________Back-End Server_____|
+                       
+ 
