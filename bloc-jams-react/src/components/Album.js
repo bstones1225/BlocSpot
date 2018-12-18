@@ -131,13 +131,13 @@ return (index+1)
    render() {
      return (
 
-       <section className="album">
+    <section className="album">
 
        <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
-            <div className="album-details">
+          <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
-            <div id="release-info">{this.state.album.releaseInfo}</div>
+            <h6 id="release-info">{this.state.album.releaseInfo}</h6>
           </div>
 
       <table id="song-list">
@@ -149,13 +149,13 @@ return (index+1)
           <tbody>
           {this.state.album.songs.map((song, index) =>(
             <tr key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnter(song)} onMouseLeave={() => this.mouseLeave(song)}>
-            <td>{this.getSongIcon(song,index)}  </td>
-            <td>{song.title}</td>
+            <td id>{this.getSongIcon(song,index)}  </td>
+            <td className="title">{song.title}</td>
             <td>{this.formatTime(song.duration)}</td>
             </tr>
           ))}
           </tbody>
-          </table>
+      </table>
 
 
           <PlayerBar
@@ -171,8 +171,8 @@ return (index+1)
             handleVolumeChange={(e) => this.handleVolumeChange(e)}
             formatTime={(time) => this.formatTime(time)}
           />
-          </section>
-      
+  </section>
+
 
      );
    }

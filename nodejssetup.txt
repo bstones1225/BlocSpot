@@ -1,0 +1,33 @@
+###Questions
+
+>1.What is `npm` and what does it do?
+
+A: Node Package manager. Installs and manages dependancy pf packages
+
+>2.What kind of information does `package.json` hold?
+
+A: Key-value pair of metadata to identify and handle the dependencies.
+
+>3.Google another Node package. Using the `demo` directory run `npm install <theNameOfThePackage> --save`. Check the contents of your `package.json` file to make sure that the dependencies list the name of the Node package.
+
+A:
+
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Demo for node.js setup.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "Brian Stones",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}

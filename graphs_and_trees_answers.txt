@@ -41,10 +41,38 @@ right child. this process repeats until we find a node equal to the value we are
 at which point we will exit the while loop and return either a statement that let's the user know if we have found the value or not.
 
 ```
-function findNumber(numberToFind) {
+function Node(val){
+    this.value = val;
+    this.left = null;
+    this.right = null;
+}
+
+function BinarySearchTree(){
+    this.root = null;
+}
+
+BinarySearchTree.prototype.push = function(val){
+    var root = this.root;
+    if(!root){
+       root = new Node(val);
+       return;
+    }
+    var currentNode = root;
+    var newNode = new Node(val);
+    while(currentNode){
+        if (val < currentNode.value){
+            if(!currentNode.left){
+            currentNode.left = newNode;
+            break;
+        }
+    }
+}
+};
+
+BinarySearchTree.prototype.findNumber = function(numberToFind) {
   var currentNode = this.root;
 
-  while (currentNode != null) {
+  while (currentNode !== null) {
     if (numberToFind === currentNode.value) {
       return "The value " + currentNode.value + " exists in the list";
     } else if (numberToFind < currentNode.value){
@@ -54,7 +82,21 @@ function findNumber(numberToFind) {
     }
   }
   return "The value " + numberToFind + " does not exist in the list";
-}
+};
+
+
+
+var bst = new BinarySearchTree();
+var root = bst.push(3);
+bst.push(2);
+bst.push(4);
+bst.push(1);
+bst.push(5);
+bst.findNumber(5);
+
+
+
+
 ```
 
 
